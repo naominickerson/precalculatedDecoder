@@ -50,7 +50,7 @@ qubits = L.qubit_indices
 
 syndrome_list=[]
 
-if(error_type == "y" and lies == False):
+;2if(error_type == "y" and lies == False):
     # loop over all possible Y-only error configurations (w/o lies)
     for x in itertools.product([0,1,2,3],repeat =len(qubits)):
         L.array=np.zeros((d,d),dtype='uint8')

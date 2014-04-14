@@ -1,0 +1,6 @@
+#!/bin/sh
+#PBS -l walltime=1:00:00
+#PBS -l mem=1000mb
+#PBS -l ncpus=1
+
+python $HOME/precalculatedDecoder/compute_lies.py

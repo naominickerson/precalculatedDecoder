@@ -1,0 +1,63 @@
+---------------------
+files and their usage 
+---------------------
+
+
+----------------------
+precalculatedDecoder.py
+----------------------
+
+-----INPUT PARAMETERS 
+
+d - Lattice dimension (odd numbers 1,3,5... correspond to planar lattices)
+error_type - Can be either "y" or "xyz" to define the error type 
+lies - boolean True (for faulty measurements) or False (for perfect measurements)
+
+-----OUTPUT
+
+calculates parameters for the decoder and writes the results to (eg.) the following files: 
+
+(for all cases)
+'3syndromes_xyz_lies.txt': contains information on occurences of different syndromes   
+
+(only for lying cases)
+'3lies_xyz_lies.txt': contains information of probabilities of different lie patterns occurring
+
+(for all cases)
+'3results_xyz_lies.txt': contains information on  performance of the decoder for a range of physical error rates 
+
+
+
+----------------------
+compute_lies.py
+---------------------
+
+Analyses the output from *lies* and *syndromes*, to reproduce plot with different parameters. 
+
+
+--------------------------------------------
+part_compute_lies.py and run_compute_lies.py
+--------------------------------------------
+
+For lattice dimension of 5 (and higher) to computation in compute_lies.py is slow. These files
+allow the process to be launched as a number of separate jobs. 
+
+ 
+----------------
+plot_data.py
+---------------
+
+takes a *results* type file as input, and plots the data. This contains several plotting options
+depending on the type of input: 
+
+1. Perfect measurements, Y errors only
+2. Perfect measurements, XYZ errors 
+3. Imperfect measurements, Y errors only
+4. Imperfect measurements, XYZ errors only
+
+Currently the case must be chosen by uncommenting the relevant section of code in the file. 
+
+
+
+
+

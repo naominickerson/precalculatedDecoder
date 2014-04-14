@@ -1,0 +1,6 @@
+#!/bin/sh
+#PBS -l walltime=1:00:00
+#PBS -l mem=1000mb
+#PBS -l ncpus=1
+
+python $HOME/precalculatedDecoder/part_compute_lies.py 5 xyz 0.142500 0.010000 20 /home/nn311/precalculatedDecoder/5output_xyz_lies3.txt
